@@ -1,0 +1,16 @@
+html : hyper text markup lagg
+
+Html prog text editor 
+tag <></>
+
+key : html stur
+HTML : easy to use 
+html :  website start and mobile application 
+
+ket fa : 
+    table 
+    tag 
+    form
+    video ,audio
+
+    HTML VS HTML 5
