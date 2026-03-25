@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- basic html old type -->
+
+    <!-- pattern : [a-zA-Z]{range} -->
+
+    <form action="" align="center">
+        <div>
+            <label for="">Enter your name</label>
+            <!-- <input type="text" pattern="[a-zA-Z]+" required placeholder="enter your name" title="name"> -->
+             <input type="text" pattern="[a-zA-Z]{3,12}" required placeholder="enter your name" title="name">
+        </div>
+        <div>
+            <label for="">Enter your surname</label>
+            <input type="text"  pattern="[a-zA-Z]{3,12}" required placeholder="enter your surname" title="surname">
+        </div>
+        <!--
+        
+            shubhamjadav5@gmail.com
+    
+        -->
+         <div>
+            <label for="">Enter your email</label>
+            <input type="email" required placeholder="enter your email" title="email">
+        </div>
+          <div>
+            <label for="">Enter your number</label>
+            <!-- <input type="tel" pattern="[0-9]{10}" maxlength="10" required placeholder="enter your number" title="number"> -->
+              <input type="tel" pattern="[6-9][0-9]{9}" maxlength="10" required placeholder="enter your number" title="number">
+        </div>
+           <div>
+            <label for="">Enter your password</label>
+            <input type="password" pattern="[A-Z][a-z0-9]+[a-z@]{6,12}" required placeholder="enter your password" title="password">
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+</body>
+
+</html>
