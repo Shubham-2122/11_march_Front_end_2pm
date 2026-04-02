@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* inline tag convart block */
+        .main * {
+            border: 2px solid;
+            padding: 30px;
+            display: block;
+        }
+        /* block tag convart inline */
+
+        .main1 * {
+            border: 2px solid;
+            /* padding: 30px; */
+            display: inline;
+        }
+        .main2 *{
+              border: 2px solid;
+            padding: 30px;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div>
+            div
+            <ul>
+                ul
+                <li>
+                    li
+                    <span>span</span>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class="main1">
+        <div>
+            div
+            <ul>
+                ul
+                <li>
+                    li
+                    <span>span</span>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+     <div class="main2">
+        <div>
+            div
+            <ul>
+                ul
+                <li>
+                    li
+                    <span>span</span>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
