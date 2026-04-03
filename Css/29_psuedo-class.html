@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li:first-child{
+            background-color: red;
+        }
+        ul li:last-child{
+            background-color: lightcoral;
+        }
+        ul li:nth-child(3){
+            background-color: aqua;
+        }
+        ul li:nth-child(4){
+            background-color: aqua;
+        }
+        ul li:nth-child(odd){
+            background-color: lightgreen;
+        }
+        ul li:nth-child(even){
+            background-color: lightsalmon;
+        }
+        ul li:nth-last-child(2){
+            background-color: aqua;
+        }
+        .main{
+            height: 200px;
+            width: 200px;
+            border: 2px solid;
+            transition: 1s;
+        }
+        .main:hover{
+            background-color: lightcoral;
+            border-radius: 50%;
+            transform: translate(100px);
+        }
+        input {
+            margin-top: 30px;
+            outline: none;
+        }
+        input:focus{
+            border: 3px solid green;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <!-- : - class 
+    :: - element -->
+
+    <ul>
+        <li>Data</li>
+        <li>Data</li>
+        <li>Data</li>
+        <li>Data</li>
+        <li>Data</li>
+        <li>Data</li>
+        <li>Data</li>
+        <li>Data</li>
+        <li>Data</li>
+        <li>Data</li>
+    </ul>
+
+    <div class="main">
+
+    </div>
+
+    <!-- 
+    Hover
+    1) prenent to prenet 
+    2) prenet:hover to child 
+    3) child to child
+    
+    -->
+
+
+    <input type="text" placeholder="Enter your Name" name="" id="">
+</body>
+</html>
