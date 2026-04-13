@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* resuse */
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* header start */
+#header {
+    background-image: url("/Images/Header.png");
+    background-size: 100% 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.navbar .logo {
+    width: 50px;
+}
+
+.list .nav-li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.list .nav-li .nav-a {
+    font-size: 25px;
+    color: #835e3f;
+    font-weight: 600;
+    font-family: "Poppins";
+    text-decoration: none;
+}
+
+.icons i {
+    font-size: 25px;
+    color: #835e3f;
+}
+
+.header-content {
+    padding: 40px 0px;
+}
+
+.header-content .header-h1 {
+    font-size: 91px;
+    color: #835e3f;
+    font-weight: 400;
+    width: 50%;
+    font-family: "Calistoga";
+}
+
+.header-content .header-p {
+    width: 45%;
+    font-size: 32px;
+    color: #835e3f;
+    font-weight: 400;
+    font-family: "Nunito";
+    margin: 30px 0px;
+}
+
+.header-content .header-btn {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 100;
+    font-family: "Montserrat";
+    text-align: center;
+    border-radius: 4px;
+    background-color: #716c53;
+    border: none;
+    padding: 10px 30px;
+}
+
+/* header end */
