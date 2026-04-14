@@ -1,1 +1,46 @@
+@media only screen and (max-width:1160px) {}
 
+@media only screen and (max-width:992px) {
+    .cardData .row {
+        display: block;
+    }
+
+    .cardData .row .col {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .list {
+        display: none;
+    }
+
+    .icons .search {
+        display: none;
+    }
+
+    .icons .bar {
+        display: block;
+    }
+
+    .header-content .header-h1 {
+        width: 100%;
+    }
+
+    .header-content .header-p {
+        width: 80%;
+        margin: 10px 0px;
+    }
+
+    .team-content .team-p {
+        width: 100%;
+    }
+     .cardData .row .col {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (max-width:576px) {}
