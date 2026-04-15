@@ -95,6 +95,13 @@
 #team {
     background-color: #fff3e0;
     padding: 30px 0px;
+    position: relative;
+    overflow: hidden;
+}
+#team::after{
+    content: url("/Images/Design.png");
+    position: absolute;
+    top: 0;
 }
 
 .team-content .team-h1 {
@@ -129,14 +136,14 @@
 
 .card {
     padding: 20px 0px;
-     text-align: center;
-     color: #835e3f;
+    text-align: center;
+    color: #835e3f;
 }
 
 .card .card-img {
     width: 60%;
     margin: 0 auto;
-    
+
 }
 
 .card .card-h4 {
@@ -148,9 +155,62 @@
 }
 
 .card .card-p {
-   font-size: clamp(16px, 2.6vw, 25px);
+    font-size: clamp(16px, 2.6vw, 25px);
     font-weight: 600;
     font-family: "Nunito";
 }
 
 /* team end */
+
+/* footer start */
+#footer {
+    padding: 40px 0px;
+    background-color: #222222;
+}
+
+.foot .row {
+    display: flex;
+}
+
+.foot .row .col-4 {
+    width: 40%;
+}
+
+.foot .row .col-6 {
+    width: 60%;
+}
+
+.foot .col {
+    width: 33.33%;
+}
+
+.footd .foot-h3 {
+    font-size: clamp(16px, 3.5vw, 31px);
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Calistoga";
+    margin-bottom: 20px;
+}
+
+.foot-ul .foot-li {
+    list-style: none;
+    margin: 10px 0px;
+}
+
+.foot-ul .foot-li .foot-a {
+    font-size: clamp(16px, 2.6vw, 25px);
+    color: #ffffff;
+    font-weight: 400;
+    font-family: "Nunito";
+    text-decoration: none;
+}
+
+.foot-p {
+    font-size: clamp(16px, 2.6vw, 25px);
+    color: #ffffff;
+    width: 80%;
+    font-weight: 400;
+    font-family: "Nunito";
+}
+
+/* footer end */

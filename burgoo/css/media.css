@@ -12,6 +12,9 @@
 }
 
 @media only screen and (max-width:768px) {
+    #team::after{
+    display: none;
+}
     .list {
         display: none;
     }
@@ -36,11 +39,41 @@
     .team-content .team-p {
         width: 100%;
     }
-     .cardData .row .col {
+
+    .cardData .row .col {
         width: 100%;
         margin: 0 auto;
     }
 
+    .foot .row {
+        flex-direction: column;
+    }
+
+    .foot .row .col-4 {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0px;
+    }
+
+    .foot .row .col-6 {
+        width: 100%;
+        text-align: center;
+        
+    }
+
+    .foot .col {
+        width: 100%;
+        margin: 10px 0px;
+    }
+    .foot-p {
+        margin: 0 auto;
+    }
+
+
 }
 
-@media only screen and (max-width:576px) {}
+@media only screen and (max-width:576px) {
+     .foot-p {
+        width: 100%;
+    }
+}
