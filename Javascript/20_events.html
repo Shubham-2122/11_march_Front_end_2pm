@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        4 events : javascipt base events
+        1) mouse event : click,enter,leave 
+        2) keywbord : keypress,up,down 
+        3) form : onsubmit,onblure,foucs,
+        4) window : load(),resize()
+    -->
+    <h1 id="h1"></h1>
+    <button onclick="demo()">demo function</button>
+
+    <script>
+
+        function demo()
+        {
+            console.log("Hello demo function")
+            // document.writeln("Hello 2")
+            document.getElementById("h1").innerHTML = "hello javascript events"
+        }
+        
+    </script>
+
+</body>
+</html>
