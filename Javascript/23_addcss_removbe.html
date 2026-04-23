@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .x{
+            background: linear-gradient(red,green,blue);
+            color: white;
+            padding: 40px;
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="demo()">Addcss</button>
+    <button onclick="demo2()">Remove</button>
+
+    <button onclick="toggle()">Toggle</button>
+    <div id="main">
+        This is javascript
+    </div>
+
+    <script>
+
+        let main_tag = document.getElementById("main")
+
+        function demo(){
+            main_tag.classList.add("x")
+        }
+
+         function demo2(){
+            main_tag.classList.remove("x")
+        }
+
+        
+         function toggle(){
+            main_tag.classList.toggle("x")
+        }
+
+    </script>
+</body>
+</html>
