@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <input type="text" id="nm" onblur="return validation(nm,nmerr)" placeholder="Enter your Name">
+            <span id="nmerr"></span>
+        </div>
+        <div>
+            <input type="email" id="em" onblur="return validation(em,emerr)" placeholder="Enter your Email">
+            <span id="emerr"></span>
+        </div>
+        <div>
+            <input type="tel" id="ph" onblur="return validation(ph,pherr)" placeholder="Enter your Phone">
+            <span id="pherr"></span>
+        </div>
+        <div>
+            <input type="password" id="psw" onblur="return validation(psw,pswerr)"  placeholder="Enter your Password">
+            <span id="pswerr"></span>
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+    <!-- test("check it") -->
+    <script>
+
+        function validation(inp,err){
+            if(inp.value == "" || inp.value == null){
+                err.innerHTML = "pls field Data";
+                err.style.color = "red"
+                inp.style.border = "2px solid red";
+                return false
+            }
+            else{
+                  err.innerHTML = "";
+                 inp.style.border = "2px solid green";
+            }
+        }
+
+    </script>
+</body>
+</html>

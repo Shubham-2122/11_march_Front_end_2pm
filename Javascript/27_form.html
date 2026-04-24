@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" onsubmit="return validation()">
+        <div>
+            <input type="text" id="nm" placeholder="Enter your Name">
+            <span id="nmerr"></span>
+        </div>
+        <div>
+            <input type="text" id="snm" placeholder="Enter your Suname">
+            <span id="smerr"></span>
+        </div>
+        <div>
+            <input type="email" id="em" placeholder="Enter your Email">
+            <span id="emerr"></span>
+        </div>
+        <div>
+            <input type="tel" id="ph" placeholder="Enter your Phone">
+            <span id="pherr"></span>
+        </div>
+        <div>
+            <input type="password" id="psw" placeholder="Enter your Password">
+            <span id="pswerr"></span>
+        </div>
+        <div>
+            <input type="password" id="cpsw" placeholder="Enter your CPassword">
+        </div>
+        <div>
+            <input type="submit">
+        </div>
+    </form>
+
+
+    <script>
+
+        let nm_tag = document.getElementById("nm")
+        let nmerr = document.getElementById("nmerr")
+
+        let snm_tag = document.getElementById("snm")
+        let smerr = document.getElementById("smerr")
+        let em_tag = document.getElementById("em")
+        let emerr = document.getElementById("emerr")
+        let ph_tag = document.getElementById("ph")
+        let pherr = document.getElementById("pherr")
+
+        let psw_tag = document.getElementById("psw")
+        let pswerr = document.getElementById("pswerr")
+        let cpsw_tag = document.getElementById("cpsw") 
+
+        function validation(){
+            if(nm_tag.value == "" || nm_tag.value == null){
+                nmerr.innerHTML = "**pls field Name"
+                nmerr.style.color = "red"
+                return false
+            }
+            else{
+                nmerr.innerHTML = ""
+            }
+
+            if(snm_tag.value == "" || snm_tag.value == null){
+                 smerr.innerHTML = "**pls field Surname"
+                smerr.style.color = "red"
+                return false
+            }
+             else{
+                smerr.innerHTML = ""
+            }
+             if(em_tag.value == "" || em_tag.value == null){
+                 emerr.innerHTML = "**pls field Email"
+                emerr.style.color = "red"
+                return false
+            }
+             else{
+                emerr.innerHTML = ""
+            }
+             if(ph_tag.value == "" || ph_tag.value == null){
+                 pherr.innerHTML = "**pls field Phone"
+                pherr.style.color = "red"
+                return false
+            }
+             else{
+                pherr.innerHTML = ""
+            }
+             if(psw_tag.value == "" || psw_tag.value == null){
+                 pswerr.innerHTML = "**pls field Password"
+                pswerr.style.color = "red"
+                return false
+            }
+             else{
+                pswerr.innerHTML = ""
+            }
+
+            if(psw_tag.value != cpsw_tag.value){
+                alert("password and cpassword does not match..")
+                return false
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
