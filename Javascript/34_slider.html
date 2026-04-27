@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slider</title>
+
+<style>
+*{
+    margin: 0;
+}
+
+.main{
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+</style>
+
+</head>
+<body>
+
+<div class="main">
+    <img src="/img/1.jpeg" class="img">
+    <img src="/img/2.jpeg" class="img">
+    <img src="/img/3.jpeg" class="img">
+    <img src="/img/4.jpeg" class="img">
+</div>
+
+<script>
+let img_tag = document.getElementsByClassName("img")
+let index = 0;
+
+function slider(){
+
+    // hide all images
+    for(let i = 0; i < img_tag.length; i++){
+        img_tag[i].style.opacity = "0"
+        img_tag[i].style.transform = "scale(1.1)"
+    }
+
+    // show current image
+    img_tag[index].style.opacity = "1"
+
+    // apply transform to SAME image (correct)
+    setTimeout(function() {
+        img_tag[index].style.transform = "scale(1)"
+    }, 50)
+
+    // update index AFTER using it
+    index++;
+
+    if(index === img_tag.length){
+        index = 0;
+    }
+
+    setTimeout(slider, 1000)
+}
+
+slider()
+</script>
+
+</body>
+</html>
