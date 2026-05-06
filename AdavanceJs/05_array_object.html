@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 1) array inside array 
+        let arr = [1,2,3,4,[5,6,7,[8,9,10]]]
+        console.log(arr)
+        console.log(arr[2])
+        console.log(arr[4][1])
+        console.log(arr[4][3][2])
+
+        // 2) object inside object 
+        let person = {
+            name:"ketan",
+            age :25,
+            course : {
+                front :"Front-end",
+                Back : "Back-end",
+                full : "full-stack"
+            }
+        }
+
+        console.log(person)
+        console.log(person.name)
+        console.log(person.course.full)
+
+        // 3) array inside object 
+        let data = [1,2,4,5,{
+            name :"Rushit",
+            age : 24
+        },7,8,10]
+
+        console.log(data)
+        console.log(data[4].name)
+
+        // 4) object inside array
+
+        let perosn2 = {
+            name :"het",
+            age : 24,
+            course:["front","back"]
+        }
+
+        console.log(perosn2)
+        console.log(perosn2.course[1])
+
+    </script>
+</body>
+</html>
