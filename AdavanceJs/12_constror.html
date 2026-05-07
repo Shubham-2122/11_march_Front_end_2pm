@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- constr : when object will be create in class by defualt call 
+           : automaticall call  
+           : A class may only have one constructor
+           -->
+
+    <script>
+        class Data {
+             constructor(){
+                console.log("This is Constructor fucntion")
+            }
+            x = function demo(){
+                console.log("X function")
+            }
+            y = function demo2(){
+                console.log("Y function")
+            }
+            // constructor(){
+            //     console.log("Hello name")
+            // }
+           
+        }
+
+        const ob = new Data
+        ob.x()
+        ob.y()
+
+    </script>
+</body>
+</html>

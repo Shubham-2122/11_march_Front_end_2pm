@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        class Clc{
+            constructor(a,b){
+                this.a = a;
+                this.b = b;
+            }
+            sum(){
+                console.log(`sum : ${this.a + this.b}`)
+            }
+            sub(){
+                console.log(`sub : ${this.a - this.b}`)
+            }
+            mul(){
+                console.log(`mul : ${this.a * this.b}`)
+            }
+            Divi(){
+                console.log(`divi : ${this.a / this.b}`)
+            }
+        }
+
+        const ob = new Clc(30,20) 
+        console.log(ob)
+        ob.sum()
+        ob.Divi()
+        ob.mul()
+        ob.sub()
+
+        const data =  new Clc(40,20)
+        data.Divi()
+
+    </script>
+</body>
+</html>
