@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        
+        // 1) method overloading : Comiple error : same class have function name sa name but Deffernt parameter
+        // 2) method Overriding : runtime error : deffrenet class have function name as
+
+        // class Load{
+        //     display(a){
+        //         console.log("A :",a)
+        //     }
+        //     display(a,b){
+        //         console.log("Sum :",a+b)
+        //     }
+        //     display(a,b){
+        //         console.log("Sub :",a-b)
+        //     }
+        // }
+
+        // const data = new Load 
+        // console.log(data)
+        // data.display(20,10)
+
+
+        class A {
+            display(){
+                console.log("A class")
+            }
+        }
+        class B extends A {
+            display(){
+                console.log("B class")
+            }
+        }
+        class C extends B{
+             display(){
+                console.log("C class")
+            }
+        }
+
+        // const data = new C 
+        // console.log(data)
+        // data.display()
+        // data.display()
+
+        const demo = [new A,new B,new C]
+        console.log(demo)
+        demo.forEach((data,index)=>{
+            // console.log(data)
+            data.display()
+        })
+
+    </script>
+</body>
+</html>
