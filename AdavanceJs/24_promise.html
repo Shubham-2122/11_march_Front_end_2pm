@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Promie : it's called object 
+            : Res ,reject
+    3 State 
+    1) peading : Api Data load runing 
+    2) Fullfield : Api Data Show Completed
+    3) Rejected : Api net , data load ,error 
+
+    let p = new Promise(Function(res,rej){
+
+    }) -->
+
+
+    <script>
+
+        let p = new Promise(function(res,rej){
+            let x = 10
+            if(x != 10){
+                res("Successfully")
+            }
+            else{
+                rej("Rejected Value")
+            }
+        })
+        console.log(p)
+
+    </script>
+
+</body>
+</html>

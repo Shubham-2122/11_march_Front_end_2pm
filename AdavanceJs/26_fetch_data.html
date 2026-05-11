@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- fetch : javascript inbuilt function json,text file read 
+    fetch : that called promise 
+
+    GET : Read mode 
+    POST : Create new Data 
+    Delete : Data delete mode 
+    put/patch : update mode 
+
+
+    fetch('url',{
+        method : "GET"
+    })
+    .then(text file conavry js)
+    .then(print data)
+    .catch(error)
+
+
+     -->
+
+
+     <script>
+
+        // console.log(fetch())
+
+
+        fetch("data.txt",{
+            method:"GET"
+        })
+        .then((res)=>{
+            // text file js string convert
+            return res.text()
+        })
+        .then((data)=>{
+            console.log(data)
+            document.write(data)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+
+     </script>
+
+</body>
+</html>

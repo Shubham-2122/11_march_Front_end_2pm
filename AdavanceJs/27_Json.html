@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 
+    json : javascript syntx object Notation 
+    json : we can data read 
+    json : Easy to use 
+    json : Json string store restfully 
+
+    let json = `[
+        {
+            "id":1,
+            "name":"user",
+            "course":"front-end"
+        }
+    ]`
+
+    let ob = [
+        {
+            id : 1,
+            name :"user",
+            course :"front-end"
+        }
+    ] -->
+
+
+    <script>
+
+        let jsonData = `[
+            {
+                "id":1,
+                "name":"umang",
+                "coruse":"Front-end"
+            },
+            {
+                "id":2,
+                "name":"shubha",
+                "coruse":"Front-end"
+            },
+            {
+                "id":3,
+                "name":"ketan",
+                "coruse":"Back-end"
+            }
+        ]`
+
+        console.log(jsonData)
+        // document.write(jsonData)
+
+        let ob = JSON.parse(jsonData)
+        console.log(ob)
+
+        ob.forEach((data,index) => {
+            console.log(data.name)
+            document.write(`<h2> id : ${data.id} Name : ${data.name}</h2>`)
+        });
+
+        let objecta = [
+            {
+                id : 1,
+                name : "user1"
+            },
+            {
+                id : 2,
+                name : "user2"
+            },
+            {
+                id : 3,
+                name : "user3"
+            }
+        ]
+
+        console.log(objecta)
+
+        let data = JSON.stringify(objecta)
+        console.log(data)
+        
+
+
+    </script>
+</body>
+</html>
