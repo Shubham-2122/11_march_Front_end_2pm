@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function demo() {
+            fetch("https://6a05698faa826ca75c09c79c.mockapi.io/users", {
+                method: "GET"
+            })
+                .then((res) => {
+                    return res.json()
+                })
+                .then((data) => {
+                    console.log(data)
+                })
+                .catch((data) => {
+                    console.log(data)
+                })
+        }
+        demo()
+    </script>
+</body>
+
+</html>

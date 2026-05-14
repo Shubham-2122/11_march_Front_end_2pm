@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios@1.13.2/dist/axios.min.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+
+        const getuser = async () => {
+            try {
+                const res = await axios.get("https://6a05698faa826ca75c09c79c.mockapi.io/users")
+                console.log(res)
+                console.log(res.data)
+            } catch (error) {
+                console.log("Api data not Found",error)
+            }
+        }
+        // getuser()
+
+        // new data add
+
+        let person = {
+            name :"ketan",
+            surname : "patel",
+            email:"Ketan@gmail.com",
+            city:"ahmedabad"
+        }
+
+        const newUser =async()=>{
+            const res = await axios.post("https://6a05698faa826ca75c09c79c.mockapi.io/users",person)
+            console.log(res.data)
+        }
+        // newUser()
+
+    </script>
+</body>
+
+</html>
