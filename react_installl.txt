@@ -1,0 +1,64 @@
+Javascript
+
+React , agulre ,vue ,next.js
+
+React :single page 
+      : fast application
+      : refresh page
+      : vitrual dom 
+      : compoenent heder,footer,
+      : only html one
+      : clinet server
+      : easy read use it
+
+agulre : multiple page
+	: reshresh 
+	: real dom 
+	: html multiple
+
+React install requirement
+
+	Node : javascript runtime-enivirement
+	cmd : node -v
+		24.11.1 compursy (LTS)
+
+	npm : node package manager
+	global module : node
+	local module : created
+	3rd module : boostrap,css install
+
+	npm vs npx (extisibale)
+
+---- >  react appilcation
+	step 1: npx create-react-app app-name
+	step 2: cd app-name
+	step 3: npm start
+	
+
+Vite+react : New Version
+	1) npm create vite@latest my-react-app 
+	2) cd my-react-app 
+	3) npm run dev
+
+
+
+Floder strcu
+	1) Node Module : npm install
+	2) Public : index.html : first page , images : static
+	3) Src 	 : index.js ,App.js 
+	4) package-lock.josn, package.josn - > import json file 
+
+	Flow : index.html -> index.js -> app.js 
+	run : App.js -> index.js -> index.html
+
+
+vite_react
+	index.js == main.js
+	index.html 
+
+
+
+
+
+
+ 
