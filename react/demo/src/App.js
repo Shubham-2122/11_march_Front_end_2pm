@@ -1,5 +1,7 @@
 import React from "react";
-import Hello from "./JSX/Hello";
+import MainProps from "./Props/MainProps";
+// import Css from "./Css/Css";
+// import Hello from "./JSX/Hello";
 // import ClassCompo from "./Component/ClassCompo";
 // import FunCompo from "./Component/FunCompo";
 
@@ -14,8 +16,13 @@ function App() {
             <FunCompo /> */}
 
             {/* JSX Compoenent */}
-            <Hello />
+            {/* <Hello /> */}
 
+            {/* css  */}
+            {/* <Css /> */}
+
+            {/* Props */}
+            <MainProps />
         </div>
     )
 }
