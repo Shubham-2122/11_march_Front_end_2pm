@@ -1,6 +1,9 @@
 import React from "react";
-import FormData from "./Formhadling/FormData";
-import FormObj from "./Formhadling/FormObj";
+// import Effect from "./Effect/Effect";
+// import UseTable from "./Effect/UseTable";
+import UseAxios from "./Effect/UseAxios";
+// import FormData from "./Formhadling/FormData";
+// import FormObj from "./Formhadling/FormObj";
 // import MainProps from "./Props/MainProps";
 // import MainState from "./State/MainState";
 // import Css from "./Css/Css";
@@ -32,7 +35,12 @@ function App() {
 
             {/* FormHadling */}
             {/* <FormData /> */}
-            <FormObj />
+            {/* <FormObj /> */}
+
+            {/* UseEffect  */}
+            {/* <Effect /> */}
+            {/* <UseTable /> */}
+            <UseAxios />
         </div>
     )
 }
