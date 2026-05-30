@@ -1,7 +1,8 @@
 import React from "react";
 // import Effect from "./Effect/Effect";
 // import UseTable from "./Effect/UseTable";
-import UseAxios from "./Effect/UseAxios";
+// import UseAxios from "./Effect/UseAxios";
+import UseCard from "./Effect/UseCard";
 // import FormData from "./Formhadling/FormData";
 // import FormObj from "./Formhadling/FormObj";
 // import MainProps from "./Props/MainProps";
@@ -40,7 +41,8 @@ function App() {
             {/* UseEffect  */}
             {/* <Effect /> */}
             {/* <UseTable /> */}
-            <UseAxios />
+            {/* <UseAxios /> */}
+            <UseCard />
         </div>
     )
 }
