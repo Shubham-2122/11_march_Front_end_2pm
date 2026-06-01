@@ -1,8 +1,10 @@
 import React from "react";
+// import A from "./Context/Drilling/A";
+import ChildA from "./Context/UseContextdata/ChildA";
 // import Effect from "./Effect/Effect";
 // import UseTable from "./Effect/UseTable";
 // import UseAxios from "./Effect/UseAxios";
-import UseCard from "./Effect/UseCard";
+// import UseCard from "./Effect/UseCard";
 // import FormData from "./Formhadling/FormData";
 // import FormObj from "./Formhadling/FormObj";
 // import MainProps from "./Props/MainProps";
@@ -42,7 +44,13 @@ function App() {
             {/* <Effect /> */}
             {/* <UseTable /> */}
             {/* <UseAxios /> */}
-            <UseCard />
+            {/* <UseCard /> */}
+
+            {/* UseContext */}
+            {/* <A /> */}
+            <ChildA />
+
+
         </div>
     )
 }
