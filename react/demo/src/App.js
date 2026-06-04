@@ -1,6 +1,10 @@
 import React from "react";
+import Boot from "./Boostrapda/Boot";
+import ReactBoot from "./Boostrapda/ReactBoot";
+import Footerdata from "./Boostrapda/Footerdata";
+import Alogin from "./Boostrapda/Alogin";
 // import A from "./Context/Drilling/A";
-import ChildA from "./Context/UseContextdata/ChildA";
+// import ChildA from "./Context/UseContextdata/ChildA";
 // import Effect from "./Effect/Effect";
 // import UseTable from "./Effect/UseTable";
 // import UseAxios from "./Effect/UseAxios";
@@ -48,8 +52,13 @@ function App() {
 
             {/* UseContext */}
             {/* <A /> */}
-            <ChildA />
+            {/* <ChildA /> */}
 
+            {/* bootstrap */}
+            {/* <Boot /> */}
+            {/* <ReactBoot /> */}
+            <Alogin />
+            <Footerdata />
 
         </div>
     )
