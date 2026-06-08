@@ -1,8 +1,12 @@
 import React from "react";
-import Boot from "./Boostrapda/Boot";
-import ReactBoot from "./Boostrapda/ReactBoot";
-import Footerdata from "./Boostrapda/Footerdata";
-import Alogin from "./Boostrapda/Alogin";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./Layout/Pages/Home";
+import About from "./Layout/Pages/About";
+import Contact from "./Layout/Pages/Contact";
+// import Boot from "./Boostrapda/Boot";
+// import ReactBoot from "./Boostrapda/ReactBoot";
+// import Footerdata from "./Boostrapda/Footerdata";
+// import Alogin from "./Boostrapda/Alogin";
 // import A from "./Context/Drilling/A";
 // import ChildA from "./Context/UseContextdata/ChildA";
 // import Effect from "./Effect/Effect";
@@ -20,8 +24,9 @@ import Alogin from "./Boostrapda/Alogin";
 
 function App() {
     return (
+        <BrowserRouter>
         <div>
-            <h1>Hello this App Js file</h1>
+            {/* <h1>Hello this App Js file</h1> */}
             
             {/* compeoent */}
             {/* <ClassCompo />
@@ -57,10 +62,17 @@ function App() {
             {/* bootstrap */}
             {/* <Boot /> */}
             {/* <ReactBoot /> */}
-            <Alogin />
-            <Footerdata />
+         {/* <Alogin /> */}
+            {/* <Footerdata />  */}
+
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
 
         </div>
+        </BrowserRouter>
     )
 }
 
