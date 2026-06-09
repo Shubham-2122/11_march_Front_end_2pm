@@ -3,6 +3,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./Layout/Pages/Home";
 import About from "./Layout/Pages/About";
 import Contact from "./Layout/Pages/Contact";
+import About1 from "./Layout/Pages/About1";
+import About2 from "./Layout/Pages/About2";
+import NotFound from "./Layout/Pages/NotFound";
 // import Boot from "./Boostrapda/Boot";
 // import ReactBoot from "./Boostrapda/ReactBoot";
 // import Footerdata from "./Boostrapda/Footerdata";
@@ -67,8 +70,14 @@ function App() {
 
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
+                <Route path="/about" element={<About />} >
+                    <Route path="about1" element={<About1 />} />
+                    <Route path="about2" element={<About2 />} />
+                </Route>
                 <Route path="/contact" element={<Contact />} />
+
+                <Route path="*" element={<NotFound />} />
+
             </Routes>
 
         </div>
