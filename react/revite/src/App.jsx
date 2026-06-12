@@ -5,6 +5,7 @@ import Space from './Tailwind/Space'
 import Borderdata from './Tailwind/Borderdata'
 import Size from './Tailwind/Size'
 import Flexdata from './Tailwind/Flexdata'
+import Data from './Tailwind/Data'
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       {/* <Space /> */}
       {/* <Borderdata /> */}
       {/* <Size /> */}
-      <Flexdata />
+      {/* <Flexdata /> */}
+      <Data />
     </div>
   )
 }
