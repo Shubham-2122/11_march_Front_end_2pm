@@ -6,6 +6,8 @@ import Contact from "./Layout/Pages/Contact";
 import About1 from "./Layout/Pages/About1";
 import About2 from "./Layout/Pages/About2";
 import NotFound from "./Layout/Pages/NotFound";
+import Ref from "./Hooks/Ref";
+import Datamanger from "./Hooks/Datamanger";
 // import Boot from "./Boostrapda/Boot";
 // import ReactBoot from "./Boostrapda/ReactBoot";
 // import Footerdata from "./Boostrapda/Footerdata";
@@ -75,6 +77,8 @@ function App() {
                     <Route path="about2" element={<About2 />} />
                 </Route>
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/ref" element={<Ref />} />
+                <Route path="/data" element={<Datamanger />} />
 
                 <Route path="*" element={<NotFound />} />
 
