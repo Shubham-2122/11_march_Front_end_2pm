@@ -15,6 +15,7 @@ import Booking from "./website/Pages/Booking";
 import NotFound from "./website/Pages/NotFound";
 import Dashboard from "./Admin/Apages/Dashboard";
 import BlogsMange from "./Admin/Apages/BlogsMange";
+import TourManage from "./Admin/Apages/TourManage";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         {/* private routes */}
           <Route path="/dash" element={<Dashboard />} />
           <Route path="/blogManage" element={<BlogsMange />} />
+          <Route path="/tourManage" element={<TourManage />} />
 
         </Routes>
       </div>

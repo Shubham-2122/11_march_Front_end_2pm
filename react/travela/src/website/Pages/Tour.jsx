@@ -1,11 +1,37 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Hero from "../Coman/Hero";
 import Footer from "../Coman/Footer";
 import Header from "../Coman/Header";
+import { Helmet } from "react-helmet";
+import useApi from "../../Customhooks/useApi";
 
 function Tour() {
+  useEffect(() => {
+    fetchdata();
+  }, []);
+  const { api, fetchdata } = useApi(`http://localhost:3000/tours`);
+
+  const getnational = api.filter((tour) => tour.catgegory === "national");
+
+  const getinternational = api.filter(
+    (tour) => tour.catgegory === "international",
+  );
+
+  console.log(getnational);
+  console.log(getinternational);
+
+  // console.log(api)
   return (
     <div>
+      <Helmet>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="js/main.js"></script>
+      </Helmet>
       <Header />
       <Hero title="Tour Category" name="Category" />
       <div>
@@ -53,300 +79,70 @@ function Tour() {
                   className="tab-pane fade show p-0 active"
                 >
                   <div className="row g-4">
-                    <div className="col-md-6 col-lg-4">
-                      <div className="national-item">
-                        <img
-                          src="img/explore-tour-1.jpg"
-                          className="img-fluid w-100 rounded"
-                          alt="Image"
-                        />
-                        <div className="national-content">
-                          <div className="national-info">
-                            <h5 className="text-white text-uppercase mb-2">
-                              Weekend Tour
-                            </h5>
-                            <a href="#" className="btn-hover text-white">
-                              View All Place{" "}
-                              <i className="fa fa-arrow-right ms-2" />
-                            </a>
+                    {getnational.map((data) => {
+                      return (
+                        <div className="col-md-6 col-lg-4">
+                          <div className="national-item">
+                            <img
+                              src={data.img}
+                              className="img-fluid w-100 rounded"
+                              alt="Image"
+                            />
+                            <div className="national-content">
+                              <div className="national-info">
+                                <h5 className="text-white text-uppercase mb-2">
+                                  {data.name}
+                                </h5>
+                                <a href="#" className="btn-hover text-white">
+                                  View All Place{" "}
+                                  <i className="fa fa-arrow-right ms-2" />
+                                </a>
+                              </div>
+                            </div>
+                            <div className="national-plus-icon">
+                              <a href="#" className="my-auto">
+                                <i className="fas fa-link fa-2x text-white" />
+                              </a>
+                            </div>
                           </div>
                         </div>
-                        <div className="national-plus-icon">
-                          <a href="#" className="my-auto">
-                            <i className="fas fa-link fa-2x text-white" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-4">
-                      <div className="national-item">
-                        <img
-                          src="img/explore-tour-2.jpg"
-                          className="img-fluid w-100 rounded"
-                          alt="Image"
-                        />
-                        <div className="national-content">
-                          <div className="national-info">
-                            <h5 className="text-white text-uppercase mb-2">
-                              Holiday Tour
-                            </h5>
-                            <a href="#" className="btn-hover text-white">
-                              View All Place{" "}
-                              <i className="fa fa-arrow-right ms-2" />
-                            </a>
-                          </div>
-                        </div>
-                        <div className="national-plus-icon">
-                          <a href="#" className="my-auto">
-                            <i className="fas fa-link fa-2x text-white" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-4">
-                      <div className="national-item">
-                        <img
-                          src="img/explore-tour-3.jpg"
-                          className="img-fluid w-100 rounded"
-                          alt="Image"
-                        />
-                        <div className="national-content">
-                          <div className="national-info">
-                            <h5 className="text-white text-uppercase mb-2">
-                              Road Trip
-                            </h5>
-                            <a href="#" className="btn-hover text-white">
-                              View All Place{" "}
-                              <i className="fa fa-arrow-right ms-2" />
-                            </a>
-                          </div>
-                        </div>
-                        <div className="tour-offer bg-info">15% Off</div>
-                        <div className="national-plus-icon">
-                          <a href="#" className="my-auto">
-                            <i className="fas fa-link fa-2x text-white" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-4">
-                      <div className="national-item">
-                        <img
-                          src="img/explore-tour-4.jpg"
-                          className="img-fluid w-100 rounded"
-                          alt="Image"
-                        />
-                        <div className="national-content">
-                          <div className="national-info">
-                            <h5 className="text-white text-uppercase mb-2">
-                              Historical Trip
-                            </h5>
-                            <a href="#" className="btn-hover text-white">
-                              View All Place{" "}
-                              <i className="fa fa-arrow-right ms-2" />
-                            </a>
-                          </div>
-                        </div>
-                        <div className="national-plus-icon">
-                          <a href="#" className="my-auto">
-                            <i className="fas fa-link fa-2x text-white" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-4">
-                      <div className="national-item">
-                        <img
-                          src="img/explore-tour-5.jpg"
-                          className="img-fluid w-100 rounded"
-                          alt="Image"
-                        />
-                        <div className="national-content">
-                          <div className="national-info">
-                            <h5 className="text-white text-uppercase mb-2">
-                              Family Tour
-                            </h5>
-                            <a href="#" className="btn-hover text-white">
-                              View All Place{" "}
-                              <i className="fa fa-arrow-right ms-2" />
-                            </a>
-                          </div>
-                        </div>
-                        <div className="tour-offer bg-warning">50% Off</div>
-                        <div className="national-plus-icon">
-                          <a href="#" className="my-auto">
-                            <i className="fas fa-link fa-2x text-white" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="col-md-6 col-lg-4">
-                      <div className="national-item">
-                        <img
-                          src="img/explore-tour-6.jpg"
-                          className="img-fluid w-100 rounded"
-                          alt="Image"
-                        />
-                        <div className="national-content">
-                          <div className="national-info">
-                            <h5 className="text-white text-uppercase mb-2">
-                              Beach Tour
-                            </h5>
-                            <a href="#" className="btn-hover text-white">
-                              View All Place{" "}
-                              <i className="fa fa-arrow-right ms-2" />
-                            </a>
-                          </div>
-                        </div>
-                        <div className="national-plus-icon">
-                          <a href="#" className="my-auto">
-                            <i className="fas fa-link fa-2x text-white" />
-                          </a>
-                        </div>
-                      </div>
-                    </div>
+                      );
+                    })}
                   </div>
                 </div>
                 <div id="InternationalTab-2" className="tab-pane fade show p-0">
-                  <div className="InternationalTour-carousel owl-carousel">
-                    <div className="international-item">
-                      <img
-                        src="img/explore-tour-1.jpg"
-                        className="img-fluid w-100 rounded"
-                        alt="Image"
-                      />
-                      <div className="international-content">
-                        <div className="international-info">
-                          <h5 className="text-white text-uppercase mb-2">
-                            Australia
-                          </h5>
-                          <a href="#" className="btn-hover text-white me-4">
-                            <i className="fas fa-map-marker-alt me-1" /> 8
-                            Cities
-                          </a>
-                          <a href="#" className="btn-hover text-white">
-                            <i className="fa fa-eye ms-2" />{" "}
-                            <span>143+ Tour Places</span>
-                          </a>
+                  <div className="">
+                 <div className="row g-4">
+                    {getinternational.map((data) => {
+                      return (
+                        <div className="col-md-6 col-lg-4">
+                          <div className="international-item">
+                            <img
+                              src={data.img}
+                              className="img-fluid w-100 rounded"
+                              alt="Image"
+                            />
+                            <div className="international-content">
+                              <div className="international-info">
+                                <h5 className="text-white text-uppercase mb-2">
+                                  {data.name}
+                                </h5>
+                                <a href="#" className="btn-hover text-white">
+                                  View All Place{" "}
+                                  <i className="fa fa-arrow-right ms-2" />
+                                </a>
+                              </div>
+                            </div>
+                            <div className="international-plus-icon">
+                              <a href="#" className="my-auto">
+                                <i className="fas fa-link fa-2x text-white" />
+                              </a>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      <div className="tour-offer bg-success">30% Off</div>
-                      <div className="international-plus-icon">
-                        <a href="#" className="my-auto">
-                          <i className="fas fa-link fa-2x text-white" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="international-item">
-                      <img
-                        src="img/explore-tour-2.jpg"
-                        className="img-fluid w-100 rounded"
-                        alt="Image"
-                      />
-                      <div className="international-content">
-                        <div className="international-info">
-                          <h5 className="text-white text-uppercase mb-2">
-                            Germany
-                          </h5>
-                          <a href="#" className="btn-hover text-white me-4">
-                            <i className="fas fa-map-marker-alt me-1" /> 12
-                            Cities
-                          </a>
-                          <a href="#" className="btn-hover text-white">
-                            <i className="fa fa-eye ms-2" />{" "}
-                            <span>21+ Tour Places</span>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="international-plus-icon">
-                        <a href="#" className="my-auto">
-                          <i className="fas fa-link fa-2x text-white" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="international-item">
-                      <img
-                        src="img/explore-tour-3.jpg"
-                        className="img-fluid w-100 rounded"
-                        alt="Image"
-                      />
-                      <div className="international-content">
-                        <div className="tour-offer bg-warning">45% Off</div>
-                        <div className="international-info">
-                          <h5 className="text-white text-uppercase mb-2">
-                            Spain
-                          </h5>
-                          <a href="#" className="btn-hover text-white me-4">
-                            <i className="fas fa-map-marker-alt me-1" /> 9
-                            Cities
-                          </a>
-                          <a href="#" className="btn-hover text-white">
-                            <i className="fa fa-eye ms-2" />{" "}
-                            <span>133+ Tour Places</span>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="international-plus-icon">
-                        <a href="#" className="my-auto">
-                          <i className="fas fa-link fa-2x text-white" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="international-item">
-                      <img
-                        src="img/explore-tour-4.jpg"
-                        className="img-fluid w-100 rounded"
-                        alt="Image"
-                      />
-                      <div className="international-content">
-                        <div className="international-info">
-                          <h5 className="text-white text-uppercase mb-2">
-                            Japan
-                          </h5>
-                          <a href="#" className="btn-hover text-white me-4">
-                            <i className="fas fa-map-marker-alt me-1" /> 8
-                            Cities
-                          </a>
-                          <a href="#" className="btn-hover text-white">
-                            <i className="fa fa-eye ms-2" />{" "}
-                            <span>137+ Tour Places</span>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="international-plus-icon">
-                        <a href="#" className="my-auto">
-                          <i className="fas fa-link fa-2x text-white" />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="international-item">
-                      <img
-                        src="img/explore-tour-5.jpg"
-                        className="img-fluid w-100 rounded"
-                        alt="Image"
-                      />
-                      <div className="international-content">
-                        <div className="tour-offer bg-info">70% Off</div>
-                        <div className="international-info">
-                          <h5 className="text-white text-uppercase mb-2">
-                            London
-                          </h5>
-                          <a href="#" className="btn-hover text-white me-4">
-                            <i className="fas fa-map-marker-alt me-1" /> 17
-                            Cities
-                          </a>
-                          <a href="#" className="btn-hover text-white">
-                            <i className="fa fa-eye ms-2" />{" "}
-                            <span>26+ Tour Places</span>
-                          </a>
-                        </div>
-                      </div>
-                      <div className="international-plus-icon">
-                        <a href="#" className="my-auto">
-                          <i className="fas fa-link fa-2x text-white" />
-                        </a>
-                      </div>
-                    </div>
+                      );
+                    })}
+                  </div>
                   </div>
                 </div>
               </div>

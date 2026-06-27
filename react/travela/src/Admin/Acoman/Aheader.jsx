@@ -130,6 +130,9 @@ function Aheader() {
                 <NavLink to='/blogManage' className="nav-item nav-link">
                   Blog
                 </NavLink>
+                <NavLink to="/tourManage" className="nav-item nav-link">
+                  Tour
+                </NavLink> 
                 <div className="nav-item dropdown">
                   <a
                     href="#"
