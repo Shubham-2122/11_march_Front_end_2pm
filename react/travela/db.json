@@ -1,84 +1,90 @@
 {
-    "admin":[
-        {
-            "id":1,
-            "name":"admin",
-            "email":"admin@gmail.com",
-            "password":"1234"
-        },
-        {
-            "id":2,
-            "name":"subadmin",
-            "email":"subadmin@gmail.com",
-            "password":"123456"
-        }
-    ],
-    "users":[
-        {
-            "id":1,
-            "name":"user",
-            "email":"user@gmail.com",
-            "password":"123456",
-            "status":"unblock"
-        },
-        {
-            "id":2,
-            "name":"user2",
-            "email":"user2@gmail.com",
-            "password":"123456",
-            "status":"block"
-        },
-        {
-            "id":3,
-            "name":"user3",
-            "email":"user3@gmail.com",
-            "password":"123456",
-            "status":"unblock"
-        }
-    ],
-    "blogs":[
-        {
-            "id":1,
-            "name":"Adventures Trip",
-            "post":"Royal Hamblin",
-            "desc":"Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos",
-            "date":"28 jan 2002",
-            "img":"https://images.unsplash.com/uploads/141148589884100082977/a816dbd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEFkdmVudHVyZXMlMjBUcmlwfGVufDB8fDB8fHww"
-        },
-         {
-            "id":2,
-            "name":"traking Trip",
-            "post":"umang ",
-            "desc":"Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos",
-            "date":"12 feb 2004",
-            "img":"https://images.unsplash.com/photo-1631801753372-589f27049c4d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fEFkdmVudHVyZXMlMjBUcmlwfGVufDB8fDB8fHww"
-        }
-    ],
-    "tours":[
-        {
-            "id":1,
-            "name":"Weekend Tour",
-            "catgegory":"national",
-            "img":"https://images.unsplash.com/photo-1631801753372-589f27049c4d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fEFkdmVudHVyZXMlMjBUcmlwfGVufDB8fDB8fHww"
-        },
-        {
-            "id":2,
-            "name":"spain Tour",
-            "catgegory":"international",
-            "img":"https://images.unsplash.com/uploads/141148589884100082977/a816dbd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEFkdmVudHVyZXMlMjBUcmlwfGVufDB8fDB8fHww"
-        },
-        {
-            "id":3,
-            "name":"japan Tour",
-            "catgegory":"international",
-            "img":"https://images.unsplash.com/uploads/141148589884100082977/a816dbd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEFkdmVudHVyZXMlMjBUcmlwfGVufDB8fDB8fHww"
-        },
-        {
-            "id":4,
-            "name":"Road Trip",
-            "catgegory":"national",
-            "img":"https://images.unsplash.com/uploads/141148589884100082977/a816dbd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEFkdmVudHVyZXMlMjBUcmlwfGVufDB8fDB8fHww"
-        }
-
-    ]
+  "admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "name": "subadmin",
+      "email": "subadmin@gmail.com",
+      "password": "123456"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "user",
+      "email": "user@gmail.com",
+      "password": "123456",
+      "status": "unblock"
+    },
+    {
+      "id": "2",
+      "name": "user2",
+      "email": "user2@gmail.com",
+      "password": "123456",
+      "status": "block"
+    },
+    {
+      "id": "3",
+      "name": "user3",
+      "email": "user3@gmail.com",
+      "password": "123456",
+      "status": "unblock"
+    }
+  ],
+  "blogs": [
+    {
+      "id": "1",
+      "name": "Adventures Trip",
+      "post": "Royal Hamblin",
+      "desc": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos",
+      "date": "28 jan 2002",
+      "img": "https://images.unsplash.com/uploads/141148589884100082977/a816dbd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEFkdmVudHVyZXMlMjBUcmlwfGVufDB8fDB8fHww"
+    },
+    {
+      "id": "2",
+      "name": "traking Trip",
+      "post": "umang ",
+      "desc": "Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit diam amet diam eos",
+      "date": "12 feb 2004",
+      "img": "https://images.unsplash.com/photo-1631801753372-589f27049c4d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fEFkdmVudHVyZXMlMjBUcmlwfGVufDB8fDB8fHww"
+    }
+  ],
+  "tours": [
+    {
+      "id": "1",
+      "name": "Weekend Tour",
+      "catgegory": "national",
+      "img": "https://images.unsplash.com/photo-1631801753372-589f27049c4d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fEFkdmVudHVyZXMlMjBUcmlwfGVufDB8fDB8fHww"
+    },
+    {
+      "id": "2",
+      "name": "spain Tour",
+      "catgegory": "international",
+      "img": "https://images.unsplash.com/uploads/141148589884100082977/a816dbd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEFkdmVudHVyZXMlMjBUcmlwfGVufDB8fDB8fHww"
+    },
+    {
+      "id": "3",
+      "name": "japan Tour",
+      "catgegory": "international",
+      "img": "https://images.unsplash.com/uploads/141148589884100082977/a816dbd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEFkdmVudHVyZXMlMjBUcmlwfGVufDB8fDB8fHww"
+    },
+    {
+      "id": "4",
+      "name": "Road Trip",
+      "catgegory": "national",
+      "img": "https://images.unsplash.com/uploads/141148589884100082977/a816dbd7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fEFkdmVudHVyZXMlMjBUcmlwfGVufDB8fDB8fHww"
+    },
+    {
+      "id": "MsAuXZ4W8I4",
+      "name": "hello ",
+      "catgegory": "international",
+      "img": "https://images.pexels.com/photos/16790591/pexels-photo-16790591.jpeg?_gl=1*15tcbh7*_ga*MTcwMDQzMjkyMi4xNzgyNzE1NDQz*_ga_8JE65Q40S6*czE3ODI3MTU0NDMkbzEkZzAkdDE3ODI3MTU0NDMkajYwJGwwJGgw"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

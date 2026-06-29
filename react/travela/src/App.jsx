@@ -16,6 +16,7 @@ import NotFound from "./website/Pages/NotFound";
 import Dashboard from "./Admin/Apages/Dashboard";
 import BlogsMange from "./Admin/Apages/BlogsMange";
 import TourManage from "./Admin/Apages/TourManage";
+import ToursAdd from "./Admin/Apages/ToursAdd";
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
           <Route path="/dash" element={<Dashboard />} />
           <Route path="/blogManage" element={<BlogsMange />} />
           <Route path="/tourManage" element={<TourManage />} />
+          <Route path="/touradd" element={<ToursAdd />} />
 
         </Routes>
       </div>
