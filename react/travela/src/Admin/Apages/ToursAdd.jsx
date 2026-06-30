@@ -3,6 +3,7 @@ import Aheader from "../Acoman/Aheader";
 import Ahero from "../Acoman/Ahero";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function ToursAdd() {
 
@@ -27,7 +28,15 @@ function ToursAdd() {
 
   const getsubmit = async (e) => {
     e.preventDefault();
+    
+    if(form.catgegory == "" || form.img == "" || form.name == ""){
+      console.log("pls Field data..")
+      toast.error("pls Field data..")
+      return false
+    }
+
     try {
+      
       const res = await axios.post("http://localhost:3000/tours", form);
       setform({
         id: "",
@@ -35,9 +44,11 @@ function ToursAdd() {
         catgegory: "",
         img: "",
       });
+      toast.success("Tours data added..");
       redirect("/tourManage")
     } catch (error) {
       console.log("Api data not Found", error);
+      toast.error("Api data not Found..")
     }
   };
 

@@ -3,6 +3,8 @@ import useApi from "../../Customhooks/useApi";
 import Aheader from "../Acoman/Aheader";
 import Ahero from "../Acoman/Ahero";
 import useSinglecard from "../../Customhooks/useSinglecard";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 function TourManage() {
   useEffect(() => {
@@ -14,6 +16,18 @@ function TourManage() {
   // console.log(api)
 
   console.log(view)
+
+  // delete tour 
+  const deleteTour =async(id)=>{
+    try {
+      const res = await axios.delete(`http://localhost:3000/tours/${id}`)
+      console.log(res.data)
+      toast.success("tours data successfully deleted..")
+      fetchdata()
+    } catch (error) {
+      console.log("Api data not Found",error)
+    }
+  }
 
   return (
     <div>
@@ -45,7 +59,7 @@ function TourManage() {
                     <td>
                       <button className="bg-info" onClick={()=>singleView(data.id)}>View</button>
                       <button className="bg-success mx-2">Edit</button>
-                      <button className="bg-danger">Delete</button>
+                      <button className="bg-danger" onClick={()=>deleteTour(data.id)}>Delete</button>
                     </td>
                   </tr>
                 );
