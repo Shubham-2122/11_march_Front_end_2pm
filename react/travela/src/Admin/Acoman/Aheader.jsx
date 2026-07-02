@@ -1,10 +1,27 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useEffect } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Aheader() {
+
+  useEffect(()=>{
+    if(!localStorage.getItem("Aid")){
+      redirect("/alogin")
+    }
+  })
+
+  const redirect = useNavigate()
+
+  const logout=()=>{
+    localStorage.removeItem("Aid")
+    localStorage.removeItem("Aname")
+    redirect("/alogin")
+    toast.success("Alogout Successfully")
+  }
+
   return (
     <div>
-        <div>
+      <div>
         {/* Topbar Start */}
         <div className="container-fluid bg-primary px-5 d-none d-lg-block">
           <div className="row gx-0">
@@ -50,46 +67,34 @@ function Aheader() {
                 className="d-inline-flex align-items-center"
                 style={{ height: 45 }}
               >
-                <a href="#">
-                  <small className="me-3 text-light">
-                    <i className="fa fa-user me-2" />
-                    Register
-                  </small>
-                </a>
-                <a href="#">
-                  <small className="me-3 text-light">
-                    <i className="fa fa-sign-in-alt me-2" />
-                    Login
-                  </small>
-                </a>
-                <div className="dropdown">
-                  <a
-                    href="#"
-                    className="dropdown-toggle text-light"
-                    data-bs-toggle="dropdown"
-                  >
-                    <small>
-                      <i className="fa fa-home me-2" /> My Dashboard
-                    </small>
-                  </a>
-                  <div className="dropdown-menu rounded">
-                    <a href="#" className="dropdown-item">
-                      <i className="fas fa-user-alt me-2" /> My Profile
-                    </a>
-                    <a href="#" className="dropdown-item">
-                      <i className="fas fa-comment-alt me-2" /> Inbox
-                    </a>
-                    <a href="#" className="dropdown-item">
-                      <i className="fas fa-bell me-2" /> Notifications
-                    </a>
-                    <a href="#" className="dropdown-item">
-                      <i className="fas fa-cog me-2" /> Account Settings
-                    </a>
-                    <a href="#" className="dropdown-item">
-                      <i className="fas fa-power-off me-2" /> Log Out
-                    </a>
-                  </div>
-                </div>
+                {(() => {
+                  if (localStorage.getItem("Aid")) {
+                    return (
+                      // <a href="#">
+                        <small className="me-3 text-light">hello {localStorage.getItem("Aname")}</small>
+                      // </a>
+                    );
+                  }
+                })()}
+
+                {
+                  (()=>{
+                    if(localStorage.getItem("Aid")){
+                      return(
+                        <Link >
+                        <small className="me-3 text-light" onClick={logout}>Logout</small>
+                       </Link>
+                      )
+                    }
+                    else{
+                       <Link to="/alogin" >
+                        <small  className="me-3 text-light">Login</small>
+                       </Link>
+                    }
+                  })()
+                }
+
+              
               </div>
             </div>
           </div>
@@ -127,7 +132,7 @@ function Aheader() {
                 <NavLink to="/pack" className="nav-item nav-link">
                   Packages
                 </NavLink> */}
-                <NavLink to='/blogManage' className="nav-item nav-link">
+                <NavLink to="/blogManage" className="nav-item nav-link">
                   Blog
                 </NavLink>
                 <div className="nav-item dropdown">
@@ -145,10 +150,9 @@ function Aheader() {
                     <NavLink to="/touradd" className="dropdown-item">
                       Tours Add
                     </NavLink>
-                  
                   </div>
                 </div>
-                
+
                 <div className="nav-item dropdown">
                   <a
                     href="#"
@@ -194,7 +198,7 @@ function Aheader() {
         {/* Navbar & Hero End */}
       </div>
     </div>
-  )
+  );
 }
 
-export default Aheader
+export default Aheader;

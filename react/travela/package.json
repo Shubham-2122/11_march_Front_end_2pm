@@ -11,7 +11,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.3.0",
     "axios": "^1.18.1",
+    "mdb-react-ui-kit": "^10.0.0",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-helmet": "^6.1.0",

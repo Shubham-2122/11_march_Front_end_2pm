@@ -18,6 +18,7 @@ import BlogsMange from "./Admin/Apages/BlogsMange";
 import TourManage from "./Admin/Apages/TourManage";
 import ToursAdd from "./Admin/Apages/ToursAdd";
 import { Bounce, Slide, ToastContainer, toast } from "react-toastify";
+import Alogin from "./Admin/Apages/Alogin";
 
 function App() {
   return (
@@ -57,6 +58,7 @@ function App() {
           <Route path="/blogManage" element={<BlogsMange />} />
           <Route path="/tourManage" element={<TourManage />} />
           <Route path="/touradd" element={<ToursAdd />} />
+           <Route path="/alogin" element={<Alogin />} />
         </Routes>
       </div>
     </BrowserRouter>
