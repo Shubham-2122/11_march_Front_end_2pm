@@ -1,7 +1,24 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Header() {
+
+   useEffect(()=>{
+    if(!localStorage.getItem("Uid")){
+      redirect("/login")
+    }
+  })
+
+  const redirect = useNavigate()
+
+  const logout=()=>{
+    localStorage.removeItem("Uid")
+    localStorage.removeItem("Uname")
+    redirect("/login")
+    toast.success("logout Successfully")
+  }
+
   return (
     <div>
       <div>
@@ -50,46 +67,34 @@ function Header() {
                 className="d-inline-flex align-items-center"
                 style={{ height: 45 }}
               >
-                <a href="#">
-                  <small className="me-3 text-light">
-                    <i className="fa fa-user me-2" />
-                    Register
-                  </small>
-                </a>
-                <a href="#">
-                  <small className="me-3 text-light">
-                    <i className="fa fa-sign-in-alt me-2" />
-                    Login
-                  </small>
-                </a>
-                <div className="dropdown">
-                  <a
-                    href="#"
-                    className="dropdown-toggle text-light"
-                    data-bs-toggle="dropdown"
-                  >
-                    <small>
-                      <i className="fa fa-home me-2" /> My Dashboard
-                    </small>
-                  </a>
-                  <div className="dropdown-menu rounded">
-                    <a href="#" className="dropdown-item">
-                      <i className="fas fa-user-alt me-2" /> My Profile
-                    </a>
-                    <a href="#" className="dropdown-item">
-                      <i className="fas fa-comment-alt me-2" /> Inbox
-                    </a>
-                    <a href="#" className="dropdown-item">
-                      <i className="fas fa-bell me-2" /> Notifications
-                    </a>
-                    <a href="#" className="dropdown-item">
-                      <i className="fas fa-cog me-2" /> Account Settings
-                    </a>
-                    <a href="#" className="dropdown-item">
-                      <i className="fas fa-power-off me-2" /> Log Out
-                    </a>
-                  </div>
-                </div>
+                {(() => {
+                  if (localStorage.getItem("Uid")) {
+                    return (
+                      <Link to="/edit" >
+                        <small className="me-3 text-light">hello {localStorage.getItem("Uname")}</small>
+                      </Link>
+                    );
+                  }
+                })()}
+
+                {
+                  (()=>{
+                    if(localStorage.getItem("Uid")){
+                      return(
+                        <Link >
+                        <small className="me-3 text-light" onClick={logout}>Logout</small>
+                       </Link>
+                      )
+                    }
+                    else{
+                       <Link to="/alogin" >
+                        <small  className="me-3 text-light">Login</small>
+                       </Link>
+                    }
+                  })()
+                }
+
+              
               </div>
             </div>
           </div>

@@ -19,6 +19,9 @@ import TourManage from "./Admin/Apages/TourManage";
 import ToursAdd from "./Admin/Apages/ToursAdd";
 import { Bounce, Slide, ToastContainer, toast } from "react-toastify";
 import Alogin from "./Admin/Apages/Alogin";
+import Login from "./website/Pages/Login";
+import Register from "./website/Pages/Register";
+import EditProfile from "./website/Pages/EditProfile";
 
 function App() {
   return (
@@ -50,6 +53,9 @@ function App() {
           <Route path="/desti" element={<Destination />} />
           <Route path="/blog" element={<Blogs />} />
           <Route path="/Book" element={<Booking />} />
+          <Route path="/login" element={<Login />} />
+           <Route path="/new" element={<Register />} />
+           <Route path="/edit" element={<EditProfile />} />
 
           <Route path="*" element={<NotFound />} />
 
