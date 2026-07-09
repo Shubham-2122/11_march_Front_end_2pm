@@ -6,6 +6,8 @@ import Borderdata from './Tailwind/Borderdata'
 import Size from './Tailwind/Size'
 import Flexdata from './Tailwind/Flexdata'
 import Data from './Tailwind/Data'
+import Counte from './Counte'
+import A from './Hooks/Context/A'
 
 function App() {
   return (
@@ -17,7 +19,10 @@ function App() {
       {/* <Borderdata /> */}
       {/* <Size /> */}
       {/* <Flexdata /> */}
-      <Data />
+      {/* <Data /> */}
+      <Counte />
+
+      <A />
     </div>
   )
 }
