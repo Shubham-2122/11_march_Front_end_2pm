@@ -1,12 +1,14 @@
 import React from 'react'
-import Counter from './Compoent/Counter'
-import Count from './Compoent/Count'
+// import Counter from './Compoent/Counter'
+// import Count from './Compoent/Count'
+import TodoList from './Compoent/TodoList'
 
 function App() {
   return (
     <div>
-      <Counter />
-      <Count />
+      {/* <Counter /> */}
+      {/* <Count /> */}
+      <TodoList />
     </div>
   )
 }
