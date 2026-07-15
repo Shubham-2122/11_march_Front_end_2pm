@@ -1,24 +1,25 @@
 {
-    "user": [
-        {
-            "id": 1,
-            "name": "user",
-            "email": "user@gmail.com",
-            "password": "123456"
-        },
-         {
-            "id": 2,
-            "name": "user1",
-            "email": "user1@gmail.com",
-            "password": "1234"
-        }
-    ],
-    "admin":[
-        {
-            "id":1,
-            "name":"admin",
-            "email":"admin@gmail.com",
-            "password":"1234"
-        }
-    ]
+  "user": [
+    {
+      "id": "UKBgdbn29ok",
+      "name": "Jigarr Thakkr",
+      "email": "jigar.thakkar.tops@gmail.com",
+      "password": "wqd"
+    },
+    {
+      "id": "zW7s16TBHeM",
+      "name": "Jigar Thakkar",
+      "email": "jigar93776@gmail.com",
+      "password": "sdafsaf"
+    }
+  ],
+  "admin": [
+    {
+      "id": "1",
+      "name": "admin",
+      "email": "admin@gmail.com",
+      "password": "1234"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
